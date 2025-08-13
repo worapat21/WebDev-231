@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สั่งซื้อสินค้าที่ระลึก 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6f7ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            border-top: 20px solid #ff9900;
+        }
+        h1 {
+            color: #ff9900;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #d17500;
+            border-bottom: 2px solid #ffe0b3;
+            padding-bottom: 12px;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="file"],
+        .form-group textarea,
+        .form-group select,
+        .form-group input[type="number"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group input[type="date"]:focus,
+        .form-group textarea:focus,
+        .form-group select:focus,
+        .form-group input[type="number"]:focus {
+            border-color: #ff9900;
+            box-shadow: 0 0 8px rgba(255, 153, 0, 0.2);
+            outline: none;
+        }
+        .radio-group label, .checkbox-group label {
+            margin-right: 20px;
+            font-weight: normal;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .radio-group input[type="radio"], .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            width: fit-content;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 แบบฟอร์มสั่งซื้อสินค้าที่ระลึก 30 ปี วิทยาการคอมพิวเตอร์ 🛒</h1>
+        <p style="text-align: center; font-style: italic; color: #666;">กรุณากรอกข้อมูลเพื่อทำการสั่งซื้อ</p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <h2>ข้อมูลส่วนตัว</h2>
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="first-name">ชื่อ:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">นามสกุล:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">ที่อยู่จัดส่ง:</label>
+                <textarea id="address" name="address" rows="4" placeholder="บ้านเลขที่, ถนน, แขวง/ตำบล, เขต/อำเภอ, จังหวัด, รหัสไปรษณีย์" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tel">เบอร์โทรศัพท์:</label>
+                <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" placeholder="เช่น 08XXXXXXXX" required>
+            </div>
+            <div class="form-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com">
+            </div>
+
+            <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); margin: 40px 0;">
+
+            <h2>รายการสินค้าที่ต้องการสั่งซื้อ</h2>
+            <div class="form-group">
+                <label for="item-selection">เลือกประเภทสินค้า:</label>
+                <select id="item-selection" name="item-selection" required onchange="showItemDetails()">
+                    <option value="">-- กรุณาเลือก --</option>
+                    <option value="shirt">เสื้อ</option>
+                    <option value="bag">กระเป๋า</option>
+                    <option value="mug">แก้ว</option>
+                    <option value="hat">หมวก</option>
+                    <option value="umbrella">ร่ม</option>
+                    <option value="pin">เข็มกลัด</option>
+                    <option value="notebook">สมุด</option>
+                    <option value="pen">ปากกา</option>
+                    <option value="other">อื่นๆ</option>
+                </select>
+            </div>
+
+            <div id="shirt-details" style="display: none; border: 1px solid #ffe0b3; padding: 15px; border-radius: 8px; background-color: #fffaf0; margin-bottom: 20px;">
+                <h3>รายละเอียดเสื้อ</h3>
+                <div class="grid-container">
+                    <div class="form-group">
+                        <label for="shirt-color-customer">สีเสื้อ:</label>
+                        <input type="text" id="shirt-color-customer" name="shirt-color-customer" placeholder="เช่น ดำ, ขาว, เทา">
+                    </div>
+                    <div class="form-group">
+                        <label for="shirt-size-customer">ขนาดเสื้อ:</label>
+                        <input type="text" id="shirt-size-customer" name="shirt-size-customer" placeholder="เช่น XS, 3XL">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="shirt-quantity">จำนวน:</label>
+                    <input type="number" id="shirt-quantity" name="shirt-quantity" min="1" value="1">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-items">ระบุรายการสินค้าและรายละเอียดเพิ่มเติม:</label>
+                <textarea id="additional-items" name="additional-items" rows="5" placeholder="ตัวอย่าง:
+- เสื้อ: สีดำ, ขนาด L, 2 ตัว
+- กระเป๋า: 1 ใบ
+- แก้ว: 1 ใบ
+- หมวก: สีน้ำเงิน, 1 ใบ
+" required></textarea>
+            </div>
+
+            <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); margin: 40px 0;">
+
+            <h2>การชำระเงินและการจัดส่ง</h2>
+            <div class="form-group">
+                <label for="payment-method">ช่องทางการชำระเงิน:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="payment-method" value="bank_transfer" required> โอนเงินผ่านธนาคาร</label><br>
+                    <label><input type="radio" name="payment-method" value="promptpay"> พร้อมเพย์</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="slip-image">รูปภาพสลิปการโอนเงิน:</label>
+                <input type="file" id="slip-image" name="slip-image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="purchase-date">วันที่โอนเงิน:</label>
+                <input type="date" id="purchase-date" name="purchase-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="delivery-option">วิธีการรับสินค้า:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="delivery-option" value="delivery" required> จัดส่ง (มีค่าใช้จ่ายเพิ่มเติม)</label><br>
+                    <label><input type="radio" name="delivery-option" value="pickup"> รับเองที่สาขาวิชาวิทยาการคอมพิวเตอร์</label>
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align: center;">
+                <button type="submit">ยืนยันการสั่งซื้อ</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showItemDetails() {
+            const selection = document.getElementById('item-selection').value;
+            document.getElementById('shirt-details').style.display = 'none';
+            if (selection === 'shirt') {
+                document.getElementById('shirt-details').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
